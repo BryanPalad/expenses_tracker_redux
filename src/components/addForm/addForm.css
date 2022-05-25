@@ -1,0 +1,136 @@
+.add-form {
+    background-color: rgba(255,255,255,0.5);
+    margin: 6px 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 60vh;
+}
+.addexpense-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.addexpense-title h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+.addexpense-title i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.form-item {
+    margin: 12px 0px;
+    width:70%;
+    padding: 4px;
+    border-radius: 6px;
+    border: 1px solid black;
+}
+.form-item label {
+    background-color: white;
+    padding: 2px 12px;
+    border-radius: 0px 4px 4px 0px;
+}
+.form-item input {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    width: 70%;
+    background-color: transparent;
+}
+.category-container-parent {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.category {
+    position: relative;
+    width: 40%;
+}
+.category-dropdown {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    margin: 12px 0px;
+    border-radius: 6px;
+    padding: 4px;
+    border: 1px solid black;
+}
+.category-dropdown i {
+    display: flex;
+    align-items: center;
+}
+.category-container {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+    background-color: white;
+    border-top: 1px solid black;
+}
+.category-item {
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0px;
+    cursor: pointer;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+.category-item label {
+    padding-left: 7px;
+}
+.category-item img {
+    height: 32px;
+    margin-right: 20px;
+}
+.form-add-button {
+    display: flex;
+    justify-content: flex-end;
+}
+.form-add-button div {
+    display: flex;
+    border: 1px solid black;
+    padding: 2px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.form-add-button div i {
+    display: flex;
+    align-items: center;
+    margin-left: 6px;
+}
+.form-add-button label {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+    .form-item {
+        width: 100%;
+    }
+    .form-item input {
+        width: 70%;
+    }
+    .amount-input {
+        width: 50% !important;
+    }
+    .category {
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 731px) {
+    .add-form {
+        min-height: 65vh;
+    }
+    .form-add-button {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
