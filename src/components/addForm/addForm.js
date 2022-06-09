@@ -33,11 +33,11 @@ const handleConfirm = () => {
             category,
             createdAt: new Date()
         }
-        successNotif("Successfully Added Expense");
-        dispatch(addExpense(data))
-        setTitle("");
-        setAmount("");
-        setCategory("");
+            successNotif("Successfully Added Expense");
+            dispatch(addExpense(data))
+            setTitle("");
+            setAmount("");
+            setCategory("");
     } 
 
 const handleTitle = (e) => {

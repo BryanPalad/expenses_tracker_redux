@@ -124,6 +124,7 @@
     outline: none;
     border: none;
     font-size: 18px;
+    width: 100%;
 }
 .modal-amount {
     display: flex;
@@ -137,11 +138,13 @@
     display: flex;
     flex-direction: row;
     margin-right: 5px;
+    width: 40%;
 }
 .modal-amount input {
     border: none;
     outline: none;
     font-size: 18px;
+    width: 100%;
 }
 .category-container-parent {
     display: flex;

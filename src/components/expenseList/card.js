@@ -186,7 +186,7 @@ const Card = ({ item, notifySuccess, notifyUpdated, notifyError }) => {
                 </div>
                 <div className="modal-amount">
                 <label>Amount: ₱</label>
-                <input placeholder='Enter an Amount' value={itemAmount} onChange={() => handleItemAmount()}/>
+                <input placeholder='Enter an Amount' value={itemAmount} onChange={(e) => handleItemAmount(e)}/>
                 </div>
                 <div className="category-container-parent">
                     <div className='category'>
