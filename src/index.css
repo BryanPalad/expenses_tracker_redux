@@ -4,7 +4,8 @@ body {
   background-image: url('../src/assets/images/shopping.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 96.5vh;
+  object-fit: cover;
   color: #001f3f;
 }
 
@@ -15,9 +16,4 @@ code {
 a {
   text-decoration: none;
   color: #001f3f;
-}
-@media (max-width: 1345px) {
-  body {
-    height: auto;
-  }
 }
