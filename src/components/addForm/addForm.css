@@ -5,9 +5,9 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    min-height: 66vh;
+    min-height: 75vh;
 }
-.addexpense-title {
+/* .addexpense-title {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -23,7 +23,7 @@
     justify-content: center;
     align-items: center;
     font-size: 25px;
-}
+} */
 .form-item {
     margin: 12px 0px;
     width:70%;

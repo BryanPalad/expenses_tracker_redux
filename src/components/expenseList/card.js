@@ -116,9 +116,7 @@ const Card = ({ item, notifySuccess, notifyUpdated, notifyError }) => {
   const date = new Date(item.createdAt);
   const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'}
   const dateExpense = (date.toLocaleDateString(undefined, options));
-
   const dispatch = useDispatch();
-
   const handleDelete = () => {
       setDialogOpen(true);
   }
@@ -134,7 +132,6 @@ const Card = ({ item, notifySuccess, notifyUpdated, notifyError }) => {
       notifySuccess();
       setDialogOpen(false);
   }
-
   return (
     <div className='card' style={{borderRight: `6px solid ${item.category.color}`}}>
         {/* UPDATE MODAL */}
@@ -189,7 +186,7 @@ const Card = ({ item, notifySuccess, notifyUpdated, notifyError }) => {
                 </div>
                 <div className="modal-amount">
                 <label>Amount: ₱</label>
-                <input placeholder='Enter an Amount' value={itemAmount} onChange={(e) => handleItemAmount(e)}/>
+                <input placeholder='Enter an Amount' value={itemAmount} onChange={() => handleItemAmount()}/>
                 </div>
                 <div className="category-container-parent">
                     <div className='category'>
@@ -250,7 +247,7 @@ const Card = ({ item, notifySuccess, notifyUpdated, notifyError }) => {
         </div>
         <div className='card-info' onClick={(e) => handleUpdateOpen(e)}>
             <label className='card-title'>{item.title}</label>
-            <label className='card-time'>{time === '2 days ago'? dateExpense : time}</label>
+            <label className='card-time' id="timelabel">{time === '2 days ago' ? dateExpense : time}</label>
         </div>
         <div className='card-right'>
             <div>

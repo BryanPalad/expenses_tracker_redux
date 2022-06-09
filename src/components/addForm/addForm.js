@@ -115,13 +115,13 @@ const handleSubmit = () => {
       </Button>
     </DialogActions>
   </Dialog>
-    <div className="addexpense-title">
+    {/* <div className="addexpense-title">
     <h2>Add Expense</h2>
     <i class="fi fi-rr-notebook"></i>
-    </div>
+    </div> */}
     <div className='form-item'>
         <label>Title</label>
-        <input placeholder='Give a name to your expenditure' value={title} onChange={(e) => handleTitle(e)}/>
+        <input placeholder='expenditure name' value={title} onChange={(e) => handleTitle(e)}/>
     </div>
     <div className='form-item'>
         <label>Amount ₱</label>

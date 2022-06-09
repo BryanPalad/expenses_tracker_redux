@@ -4,7 +4,7 @@ import './footer.css';
 const Footer = () => {
   return (
     <footer>
-        Made with by 🔥 React Redux
+        Made with 🔥 React Redux
     </footer>
   )
 }
