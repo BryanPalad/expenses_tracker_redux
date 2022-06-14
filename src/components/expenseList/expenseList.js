@@ -7,14 +7,14 @@ import TotalExpense from './totalExpense';
 import { Link } from 'react-router-dom';
 const ExpenseList = () => {
     const {expenseList: list, query} = useSelector(state=>state.expense);
-    const filteredList = list.filter(item=>item.title.includes(query));
+    const filteredList = list.filter(item=>item.title.toLowerCase().includes(query.toLowerCase()));
     const notifySuccess = () => toast.success('Expenses Removed');
     const notifyUpdated = () => toast.success('Expense Updated');
     const notifyError = (notif) => toast.error(notif)
     const inOrderList = filteredList.reverse();
     const sum = filteredList.reduce((accumulator, object) => {
       return accumulator + object.amount;
-    }, 0);
+    }, 0);  
 
   return (
     <div className='expense-list'>

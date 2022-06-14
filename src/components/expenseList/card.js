@@ -114,9 +114,14 @@ const Card = ({ item, notifySuccess, notifyUpdated, notifyError }) => {
   const [dialogOpen, setDialogOpen] = useState(false);
 
   const date = new Date(item.createdAt);
+  const getDate = date.getDate();
   const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'}
   const dateExpense = (date.toLocaleDateString(undefined, options));
   const dispatch = useDispatch();
+
+  const dateToday = new Date();
+  const getDateToday = dateToday.getDate();
+
   const handleDelete = () => {
       setDialogOpen(true);
   }
@@ -247,7 +252,7 @@ const Card = ({ item, notifySuccess, notifyUpdated, notifyError }) => {
         </div>
         <div className='card-info' onClick={(e) => handleUpdateOpen(e)}>
             <label className='card-title'>{item.title}</label>
-            <label className='card-time' id="timelabel">{time === '2 days ago' ? dateExpense : time}</label>
+            <label className='card-time' id="timelabel">{getDate !== getDateToday ? dateExpense : time}</label>
         </div>
         <div className='card-right'>
             <div>
